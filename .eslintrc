@@ -1,0 +1,79 @@
+{
+  "extends": ["react-app",
+    "plugin:@typescript-eslint/recommended"],
+  "plugins": ["simple-import-sort", "filenames"],
+  "rules": {
+    "semi": "off",
+    "arrow-parens": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "linebreak-style": "off",
+    "no-trailing-spaces": "off",
+    "react/jsx-tag-spacing": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "no-unused-vars": "off",
+    "no-undef": "off",
+    "spaced-comment": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-param-reassign": "off",
+    "react/self-closing-comp": "warn",
+    "no-shadow": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-extra-semi": "off",
+    "sort-imports": "off",
+    "import/order": "off",
+    "simple-import-sort/imports": "warn",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "eol-last": "error",
+    "filenames/match-exported": [2, "kebab"],
+    "filenames/match-regex": [2, "^[a-z-.]+$", true],
+    "import/no-default-export": "warn",
+    "arrow-body-style": ["warn", "always"],
+    "react/jsx-wrap-multilines": "warn",
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+    "react-hooks/exhaustive-deps": "off",
+    "import/prefer-default-export": "off",
+    "react/function-component-definition": [2, {
+      "namedComponents": "arrow-function"
+    }]
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "useJSXTextNode": false
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "build/",
+    "dist/",
+    "mockData/",
+    "tests/",
+    "test/",
+    "*.test.*"
+  ]
+}
