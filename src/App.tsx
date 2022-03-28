@@ -1,13 +1,10 @@
 import React from "react";
 import "./App.css";
+import LayoutPage from "./pages";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>АРМ Терапевт</p>
-      </header>
-    </div>
+    <LayoutPage />
   );
 }
 
