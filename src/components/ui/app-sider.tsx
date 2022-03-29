@@ -1,9 +1,10 @@
-import React, { FC, useState } from 'react';
-import { Layout } from "antd";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
-import styles from './styles.module.css';
-import AppMenu from './AppMenu';
+import { Layout } from "antd";
 import { Properties } from 'csstype';
+import React, { FC, useState } from 'react';
+
+import {AppMenu} from './app-menu';
+import styles from './styles.module.css';
 
 const { Sider } = Layout;
 const triggerCloseStyle: Properties = {
@@ -20,7 +21,7 @@ const triggerOpenStyle: Properties = {
 }
 
 
-const AppSider: FC = () => {
+export const AppSider: FC = () => {
   const [collapsed, setCollapsed] = useState(true)
   const toggle = () => {
     setCollapsed(!collapsed)
@@ -50,4 +51,3 @@ const AppSider: FC = () => {
   );
 };
 
-export default AppSider;

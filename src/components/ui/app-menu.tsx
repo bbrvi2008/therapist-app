@@ -1,15 +1,15 @@
-import React, { FC } from 'react';
-import { Menu } from "antd";
 import {
+  UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
-  UploadOutlined,
 } from "@ant-design/icons";
+import { Menu } from "antd";
+import React, { FC } from 'react';
 
 const { Item } = Menu;
 interface IListMenu {
   icon: JSX.Element,
-  text: String
+  text: string
 }
 const ListMenu: Array<IListMenu> = [
   { icon: <UserOutlined />, text: 'nav1' },
@@ -17,12 +17,10 @@ const ListMenu: Array<IListMenu> = [
   { icon: <UploadOutlined />, text: 'nav1' },
 ]
 
-const AppMenu: FC = () => {
+export const AppMenu: FC = () => {
   return (
     <Menu inlineCollapsed theme="dark" mode="inline">
-      {ListMenu.map((item, index) => <Item key={index} icon={item.icon}>{item.text}</Item>)}
+      {ListMenu.map((item, index) => {return <Item key={index} icon={item.icon}>{item.text}</Item>})}
     </Menu>
   );
 }
-
-export default AppMenu;
