@@ -1,5 +1,5 @@
 import './app.css'
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 
 import React from 'react'
 

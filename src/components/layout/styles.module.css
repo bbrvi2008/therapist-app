@@ -1,0 +1,45 @@
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.header {
+  background: #fff;
+  margin: 24px 15px;
+  text-align: center;
+  padding: 0;
+}
+.content {
+  flex-grow: 1;
+  padding: 24px;
+  min-height: 280px;
+  background: #fff;
+  margin: 24px 15px;
+  text-align: center;
+}
+
+.sider {
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.layout-sider-closed {
+  flex-grow: 0;
+  flex-basis: 0;
+  min-width: 0;
+  transition: all 0.3s;
+}
+.layout-sider-opened {
+  flex-grow: 0;
+  flex-basis: 0;
+  min-width: 200px;
+  transition: all 0.3s;
+}
+
+.layout-content {
+  min-height: 100vh;
+}

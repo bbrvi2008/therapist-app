@@ -20,24 +20,15 @@ const triggerOpenStyle: Properties = {
   top: '50vh',
 }
 
-
 export const AppSider: FC = () => {
   const [collapsed, setCollapsed] = useState(true)
   const toggle = () => {
     setCollapsed(!collapsed)
   }
   return (
-    <Layout hasSider style={collapsed ? { minWidth: 0, transition: 'all 0.3s' } : { minWidth: 200, transition: 'all 0.3s' }}>
+    <Layout hasSider className={collapsed ? styles['layout-sider-closed'] : styles['layout-sider-opened']}>
       <Sider
-        style={{
-          overflow: 'auto',
-          height: '100vh',
-          position: 'fixed',
-          left: 0,
-          top: 0,
-          bottom: 0,
-        }}
-
+        className={styles.sider}
         trigger={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
         onCollapse={toggle}
         collapsedWidth={0}
